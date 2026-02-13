@@ -1,0 +1,153 @@
+[MASTER]
+# Specify a configuration file.
+# rcfile=
+
+# Python code to execute, usually for sys.path manipulation
+# init-hook=
+
+# Add files or directories to the blacklist. They should be base names, not paths.
+ignore=CVS,.git,__pycache__,venv,.venv,env,.env
+
+# Add files or directories matching the regex patterns to the blacklist.
+ignore-patterns=
+
+# Use multiple processes to speed up Pylint.
+jobs=4
+
+# Pickle collected data for later comparisons.
+persistent=yes
+
+# List of plugins (as comma separated values of python modules names)
+load-plugins=
+
+# When enabled, pylint would attempt to guess common misconfiguration and emit
+# user-friendly hints instead of false-positive error messages.
+suggestion-mode=yes
+
+[MESSAGES CONTROL]
+# Disable the message, report, category or checker with the given id(s).
+disable=
+    missing-docstring,
+    too-few-public-methods,
+    line-too-long,
+    import-error,
+    no-member
+
+[REPORTS]
+# Set the output format.
+output-format=colorized
+
+# Tells whether to display a full report or only the messages
+reports=no
+
+# Python expression which should return a note less than 10
+evaluation=10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)
+
+[REFACTORING]
+# Maximum number of nested blocks for function / method body
+max-nested-blocks=3
+
+# Complete name of functions that never returns.
+never-returning-functions=sys.exit
+
+[BASIC]
+# Good variable names which should always be accepted
+good-names=i,j,k,ex,Run,_,id,db
+
+# Bad variable names which should always be refused
+bad-names=foo,bar,baz,toto,tutu,tata
+
+# Naming style matching correct argument names
+argument-naming-style=snake_case
+
+# Naming style matching correct attribute names
+attr-naming-style=snake_case
+
+# Naming style matching correct class names
+class-naming-style=PascalCase
+
+# Naming style matching correct constant names
+const-naming-style=UPPER_CASE
+
+# Naming style matching correct function names
+function-naming-style=snake_case
+
+# Naming style matching correct method names
+method-naming-style=snake_case
+
+# Naming style matching correct module names
+module-naming-style=snake_case
+
+# Naming style matching correct variable names
+variable-naming-style=snake_case
+
+[FORMAT]
+# Maximum number of characters on a single line.
+max-line-length=100
+
+# Maximum number of lines in a module
+max-module-lines=500
+
+# String used as indentation unit.
+indent-string='    '
+
+# Expected format of line ending
+expected-line-ending-format=LF
+
+[DESIGN]
+# Maximum number of arguments for function / method
+max-args=5
+
+# Maximum number of attributes for a class
+max-attributes=10
+
+# Maximum number of boolean expressions in a if statement
+max-bool-expr=3
+
+# Maximum number of branch for function / method body
+max-branches=10
+
+# Maximum number of locals for function / method body
+max-locals=15
+
+# Maximum number of parents for a class
+max-parents=7
+
+# Maximum number of public methods for a class
+max-public-methods=20
+
+# Maximum number of return / yield for function / method body
+max-returns=6
+
+# Maximum number of statements in function / method body
+max-statements=50
+
+# Minimum number of public methods for a class
+min-public-methods=0
+
+[CLASSES]
+# List of method names used to declare instance attributes.
+defining-attr-methods=__init__,__new__,setUp
+
+# List of valid names for the first argument in a class method.
+valid-classmethod-first-arg=cls
+
+# List of valid names for the first argument in a metaclass class method.
+valid-metaclass-classmethod-first-arg=mcs
+
+[IMPORTS]
+# Allow wildcard imports from modules that define __all__.
+allow-wildcard-with-all=no
+
+# Deprecated modules which should not be used
+deprecated-modules=regsub,TERMIOS,Bastion,rexec
+
+# Create a graph of external dependencies in the given file
+ext-import-graph=
+
+# Create a graph of internal dependencies in the given file
+int-import-graph=
+
+[EXCEPTIONS]
+# Exceptions that will emit a warning when being caught.
+overgeneral-exceptions=Exception
